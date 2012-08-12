@@ -11,6 +11,7 @@
 		2582A0C115C280F400D6D1BC /* libirrklang.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2582A0BC15C27DCD00D6D1BC /* libirrklang.dylib */; };
 		2582A0C515C28F4800D6D1BC /* ikpMP3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2582A0C415C28F4800D6D1BC /* ikpMP3.dylib */; };
 		2582A0C715C2900600D6D1BC /* ikpFLAC.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2582A0C615C2900600D6D1BC /* ikpFLAC.dylib */; };
+		2583762A15D7A696008C49D1 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2583762915D7A696008C49D1 /* tinyxml2.cpp */; };
 		25E987C015C2767500CAAF1D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25E987BF15C2767500CAAF1D /* main.cpp */; };
 		25E987C215C2767500CAAF1D /* Musicate.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25E987C115C2767500CAAF1D /* Musicate.1 */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,10 @@
 		2582A0BC15C27DCD00D6D1BC /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = Musicate/libirrklang.dylib; sourceTree = "<group>"; };
 		2582A0C415C28F4800D6D1BC /* ikpMP3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpMP3.dylib; path = Musicate/ikpMP3.dylib; sourceTree = "<group>"; };
 		2582A0C615C2900600D6D1BC /* ikpFLAC.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpFLAC.dylib; path = Musicate/ikpFLAC.dylib; sourceTree = "<group>"; };
+		2583762815D7A696008C49D1 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = Musicate/tinyxml2/tinyxml2.h; sourceTree = "<group>"; };
+		2583762915D7A696008C49D1 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = tinyxml2/tinyxml2.cpp; sourceTree = "<group>"; };
+		2583762D15D7A864008C49D1 /* 02 Daaru Desi  - DownloadMing.INFO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "02 Daaru Desi  - DownloadMing.INFO.mp3"; path = "Musicate/02 Daaru Desi  - DownloadMing.INFO.mp3"; sourceTree = "<group>"; };
+		2583762E15D7A864008C49D1 /* dream.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = dream.xml; sourceTree = "<group>"; };
 		25E987BB15C2767500CAAF1D /* Musicate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Musicate; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E987BF15C2767500CAAF1D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		25E987C115C2767500CAAF1D /* Musicate.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Musicate.1; sourceTree = "<group>"; };
@@ -74,14 +79,25 @@
 		2564257115C68B7D006E01E7 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				2583762815D7A696008C49D1 /* tinyxml2.h */,
 				2564257415C68CA4006E01E7 /* mfile.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		2583762C15D7A83A008C49D1 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				2583762D15D7A864008C49D1 /* 02 Daaru Desi  - DownloadMing.INFO.mp3 */,
+				2583762E15D7A864008C49D1 /* dream.xml */,
+			);
+			name = Examples;
+			sourceTree = "<group>";
+		};
 		25E987B015C2767500CAAF1D = {
 			isa = PBXGroup;
 			children = (
+				2583762C15D7A83A008C49D1 /* Examples */,
 				2564257115C68B7D006E01E7 /* Headers */,
 				2582A0C615C2900600D6D1BC /* ikpFLAC.dylib */,
 				2582A0C415C28F4800D6D1BC /* ikpMP3.dylib */,
@@ -102,6 +118,7 @@
 		25E987BE15C2767500CAAF1D /* Musicate */ = {
 			isa = PBXGroup;
 			children = (
+				2583762915D7A696008C49D1 /* tinyxml2.cpp */,
 				25E987BF15C2767500CAAF1D /* main.cpp */,
 				25E987C115C2767500CAAF1D /* Musicate.1 */,
 			);
@@ -178,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E987C015C2767500CAAF1D /* main.cpp in Sources */,
+				2583762A15D7A696008C49D1 /* tinyxml2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

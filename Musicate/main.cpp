@@ -9,12 +9,15 @@
 #include <iostream>
 #include <stdio.h>
 #include <irrKlang.h>
+#include "tinyxml2.h"
 
 using namespace irrklang;
+using namespace tinyxml2;
 using namespace std;
 
 bool play = false;
 char* currentFile = NULL;
+XMLDocument doc;
 
 char* nextFile()
 {
@@ -43,19 +46,40 @@ void List()
     
 }
 
+int LoadXMLFile()
+{
+    doc.LoadFile( "/Users/Aamir/Documents/workspace/Musicate/dream.xml" );
+    
+    return doc.ErrorID();
+}
+
 int main(int argc, const char * argv[])
 {
     ISoundEngine *engine = createIrrKlangDevice(); 
     if (!engine)
         return 0;
 
-    engine->play2D("/Users/Aamir/Music/iTunes/iTunes Media/Music/www.Songs.PK/3 Idiots/07 Aal Izz Well (Remix) - www.Songs.PK.mp3", true);
+    printf("Opening XML document\n");
+    bool XMLloaded = false;
+    XMLloaded = (LoadXMLFile() == 0);
+    if (XMLloaded)
+    {
+        //Time to read
+        XMLPrinter printer;
+        doc.Print(&printer);
+        doc.Parse(printer.CStr());
+        XMLElement* titleElement = doc.FirstChildElement( "PLAY" )->FirstChildElement( "TITLE" );
+        const char* title = titleElement->GetText();
+        printf( "Name of play (1): %s\n", title );
+    }
+    
+    /* --- PLAYING FILE --*/
+    engine->play2D("/Users/Aamir/Documents/workspace/Musicate/Musicate/02 Daaru Desi  - DownloadMing.INFO.mp3", true);
     play = true;
-	printf("\nPlaying...\n");
     
-    
+	
+    printf("\nPlaying...\n");
     char i = 0;
-    
     while(i != 'q')
     {
         cout << "Press q to quit, p to toggle play and pause: \n";
