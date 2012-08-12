@@ -7,15 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2582A0BD15C27DCD00D6D1BC /* libirrklang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2582A0BC15C27DCD00D6D1BC /* libirrklang.dylib */; };
+		2582A0C115C280F400D6D1BC /* libirrklang.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2582A0BC15C27DCD00D6D1BC /* libirrklang.dylib */; };
+		2582A0C515C28F4800D6D1BC /* ikpMP3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2582A0C415C28F4800D6D1BC /* ikpMP3.dylib */; };
+		2582A0C715C2900600D6D1BC /* ikpFLAC.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2582A0C615C2900600D6D1BC /* ikpFLAC.dylib */; };
 		25E987C015C2767500CAAF1D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25E987BF15C2767500CAAF1D /* main.cpp */; };
 		25E987C215C2767500CAAF1D /* Musicate.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25E987C115C2767500CAAF1D /* Musicate.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2582A0C015C280D900D6D1BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = user/local/lib;
+			dstSubfolderSpec = 10;
+			files = (
+				2582A0C115C280F400D6D1BC /* libirrklang.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2582A0C315C28F2700D6D1BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2582A0C715C2900600D6D1BC /* ikpFLAC.dylib in CopyFiles */,
+				2582A0C515C28F4800D6D1BC /* ikpMP3.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25E987B915C2767500CAAF1D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 				25E987C215C2767500CAAF1D /* Musicate.1 in CopyFiles */,
@@ -25,6 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2564257415C68CA4006E01E7 /* mfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mfile.h; sourceTree = "<group>"; };
+		2582A0BC15C27DCD00D6D1BC /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = Musicate/libirrklang.dylib; sourceTree = "<group>"; };
+		2582A0C415C28F4800D6D1BC /* ikpMP3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpMP3.dylib; path = Musicate/ikpMP3.dylib; sourceTree = "<group>"; };
+		2582A0C615C2900600D6D1BC /* ikpFLAC.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpFLAC.dylib; path = Musicate/ikpFLAC.dylib; sourceTree = "<group>"; };
 		25E987BB15C2767500CAAF1D /* Musicate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Musicate; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E987BF15C2767500CAAF1D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		25E987C115C2767500CAAF1D /* Musicate.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Musicate.1; sourceTree = "<group>"; };
@@ -35,15 +64,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2582A0BD15C27DCD00D6D1BC /* libirrklang.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2564257115C68B7D006E01E7 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2564257415C68CA4006E01E7 /* mfile.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		25E987B015C2767500CAAF1D = {
 			isa = PBXGroup;
 			children = (
+				2564257115C68B7D006E01E7 /* Headers */,
+				2582A0C615C2900600D6D1BC /* ikpFLAC.dylib */,
+				2582A0C415C28F4800D6D1BC /* ikpMP3.dylib */,
+				2582A0BC15C27DCD00D6D1BC /* libirrklang.dylib */,
 				25E987BE15C2767500CAAF1D /* Musicate */,
 				25E987BC15C2767500CAAF1D /* Products */,
 			);
@@ -76,6 +118,9 @@
 				25E987B715C2767500CAAF1D /* Sources */,
 				25E987B815C2767500CAAF1D /* Frameworks */,
 				25E987B915C2767500CAAF1D /* CopyFiles */,
+				2582A0C015C280D900D6D1BC /* CopyFiles */,
+				2582A0BE15C2803C00D6D1BC /* ShellScript */,
+				2582A0C315C28F2700D6D1BC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -111,6 +156,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2582A0BE15C2803C00D6D1BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change /usr/local/lib/libirrklang.dylib @executable_path/libirrklang.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25E987B715C2767500CAAF1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -127,7 +188,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -154,7 +215,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -173,6 +234,11 @@
 		25E987C615C2767500CAAF1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = Musicate/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Musicate\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -180,6 +246,11 @@
 		25E987C715C2767500CAAF1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = Musicate/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Musicate\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -203,6 +274,7 @@
 				25E987C715C2767500CAAF1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
